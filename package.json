@@ -3,8 +3,10 @@
   "module": "src/index.tsx",
   "type": "module",
   "scripts": {
+    "db:seed": "bun ./src/db/seed.ts",
     "db:push": "bunx drizzle-kit push:sqlite",
-    "db:studio": "bunx drizzle-kit studio"
+    "db:studio": "bunx drizzle-kit studio",
+    "start": "bun run --watch src/index.tsx"
   },
   "devDependencies": {
     "bun-types": "latest",
