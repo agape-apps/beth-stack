@@ -68,8 +68,6 @@ const app = new Elysia()
         throw new Error("Name cannot be empty");
       }
 
-      console.log(body.conent);
-
       const newItem = await db
         .insert(shoppingItems)
         .values(body)
@@ -144,6 +142,7 @@ function ShoppingForm() {
       class="flex flex-row space-x-5 mt-5"
       hx-post="/shopping"
       hx-swap="beforebegin"
+      _="target"
     >
       <input type="text" name="name" class="border border-black p-2" />
       <button type="submit">Add</button>
