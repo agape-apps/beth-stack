@@ -4,7 +4,7 @@ import { db } from "./";
 if (!("DATABASE_URL" in process.env))
   throw new Error("DATABASE_URL not found on .env.development");
 
-const main = async () => {
+const seed = async () => {
   const records = [
     {
       name: "Eggs",
@@ -19,4 +19,4 @@ const main = async () => {
   console.log("Seed done");
 };
 
-main();
+seed();
