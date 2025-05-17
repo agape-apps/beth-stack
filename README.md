@@ -41,6 +41,7 @@ lsof -t -i :3000 | xargs kill
 ```
 
 ### Customize Bulma with Sass
+
 - https://bulma.io/documentation/customize/with-sass/
 
 Use either
@@ -50,8 +51,20 @@ bun run build:bulma
 bun run dev:bulma
 ```
 
+### Database
+
+- https://orm.drizzle.team/docs/tutorials/drizzle-with-turso
+
+View Database
+
+```
+bunx drizzle-kit studio
+```
+
 ### TODO
-- Create an HTMX Version of the Tropico template with a mobile dropdown menu
+- Create an HTMX/JSX Version of the Tropico index.html template with a mobile dropdown menu
+- fix the unwanted behaviour at (min-width: 769px) and (max-width: 1023px) and remove the redundant fixes
+- check if this is caused by the SASS version of Bulma
 
 ### Potential Issues
 
