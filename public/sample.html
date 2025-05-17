@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sample Static HTML Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/sample.css">
+</head>
+<body class="has-background-light">
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-centered has-text-info is-2">Static HTML Page with Elysia</h1>
+
+            <div class="columns is-centered">
+                <div class="column is-half">
+                    <div class="card mb-5">
+                        <div class="card-content">
+                            <h2 class="title is-4 has-text-info">Sample Image</h2>
+                            <p class="mb-3">This is a sample image served from the public directory:</p>
+                            <figure class="image is-128x128 is-centered mx-auto">
+                                <img src="images/sample.svg" alt="Sample SVG Image">
+                            </figure>
+                        </div>
+                    </div>
+
+                    <div class="card mb-5">
+                        <div class="card-content">
+                            <h2 class="title is-4 has-text-info">About This Page</h2>
+                            <p class="mb-2">This page demonstrates how Elysia can serve static HTML files with embedded images.</p>
+                            <p class="mb-2">The image above is loaded from the <code>images</code> directory.</p>
+                            <p>This page now uses Bulma CSS framework along with custom CSS from <code>css/sample.css</code> and JavaScript from <code>js/sample.js</code>.</p>
+                        </div>
+                    </div>
+
+                    <div class="has-text-centered">
+                        <a href="/" class="button is-info">Return to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/sample.js"></script>
+</body>
+</html>
