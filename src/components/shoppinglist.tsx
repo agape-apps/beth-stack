@@ -12,7 +12,7 @@ export function RootPage() {
     <title>The BETH Stack</title>
     <script src="https://unpkg.com/htmx.org@1.9.3"></script>
     <script src="https://unpkg.com/hyperscript.org@0.9.14"></script>
-    <link rel="stylesheet" href="/css/my-bulma.css">
+    <link rel="stylesheet" href="/css/custom-bulma.css">
 </head>
 
 <body
