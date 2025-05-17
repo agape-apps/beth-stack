@@ -2,9 +2,19 @@
 
 An opinionated hypermedia-driven web framework that prioritizes developer experience while still having amazing performance.
 
-This stack consists of Bun, Elysia, TypeScript, JSX templates, HTMX, Hyperscript and Bulma CSS
+This tech stack consists of:
 
-There is no build step required for TypeScript and JSX. Bulma only requires a build step when customizing the theme.
+- Bun https://bun.sh
+- ElysiaJS https://elysiajs.com/
+- Turso (SQLite) https://docs.turso.tech
+- HTMX https://htmx.org/
+---
+- SQLite https://www.sqlite.org
+- Drizzle ORM: https://orm.drizzle.team
+- TypeScript https://www.typescriptlang.org/docs/
+- JSX templates https://www.typescriptlang.org/docs/handbook/jsx.html
+- Hyperscript https://hyperscript.org
+- Bulma CSS https://bulma.io
 
 ![Screenshot](docs/ShoppingListScreenshot.png)
 
@@ -15,6 +25,8 @@ There is no build step required for TypeScript and JSX. Bulma only requires a bu
 - The static site is based on the Bulma Tropico template: [restylianos/bulma-tropico-template: Bulma tropico template 🍍](https://github.com/restylianos/bulma-tropico-template)
 
 ### Commands
+
+- There is no build step required for TypeScript and JSX. Bulma only requires a build step when customizing the theme.
 
 Run the server
 
