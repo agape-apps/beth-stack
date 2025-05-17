@@ -4,7 +4,7 @@ import { html } from "@elysiajs/html";
 import * as elements from "typed-html";
 import { db } from "./db";
 import { shoppingItems } from "./db/schema";
-import { BaseHtml, ShoppingItem, ShoppingList } from "./components/shoppinglist";
+import { RootPage, ShoppingItem, ShoppingList } from "./components/shoppinglist";
 
 // for serving static pages with images
 import { staticPlugin } from "@elysiajs/static";
@@ -16,14 +16,7 @@ const app = new Elysia()
 
   .get("/", ({ html }) =>
     html(
-      <BaseHtml>
-        <body
-          class="has-background-light"
-          hx-get="/shopping"
-          hx-swap="innerHTML"
-          hx-trigger="load"
-        />
-      </BaseHtml>
+      <RootPage />
     )
   )
 

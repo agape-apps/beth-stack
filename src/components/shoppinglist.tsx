@@ -1,7 +1,8 @@
 import * as elements from "typed-html";
 import { Shopping } from "../db/schema";
 
-export const BaseHtml = ({ children }: any) => `
+export function RootPage() {
+  return `
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,8 +15,15 @@ export const BaseHtml = ({ children }: any) => `
     <link rel="stylesheet" href="/css/my-bulma.css">
 </head>
 
-${children}
-`;
+<body
+  class="has-background-light"
+  hx-get="/shopping"
+  hx-swap="innerHTML"
+  hx-trigger="load"
+></body>
+</html>
+  `;
+}
 
 export function ShoppingItem({ id, name, purchased }: Shopping) {
   return (
