@@ -2,13 +2,15 @@
 
 An opinionated hypermedia-driven web framework that prioritizes developer experience while still having amazing performance.
 
-Based on https://github.com/wezzcoetzee/beth-stack
+This stack consists of Bun, Elysia, TypeScript, JSX templates, HTMX, Hyperscript and Bulma CSS
 
-This stack consists of Bun, Elysia, TypeScript, JSX templates, HTMX and Bulma CSS
+There is no build step required for TypeScript and JSX. Bulma only requires a build step when customizing the theme.
+
+![Screenshot](docs/ShoppingListScreenshot.png)
 
 ## Resources
 
-- You can find the Medium article [here](https://medium.com/@wezzcoetzee/the-beth-stack-c5887a606ed3)
+- The BETH Stack is based on the Medium article [here](https://medium.com/@wezzcoetzee/the-beth-stack-c5887a606ed3)
 
 - The static site is based on the Bulma Tropico template: [restylianos/bulma-tropico-template: Bulma tropico template 🍍](https://github.com/restylianos/bulma-tropico-template)
 
@@ -26,9 +28,18 @@ Kill the server
 lsof -t -i :3000 | xargs kill
 ```
 
+### Customize Bulma with Sass
+- https://bulma.io/documentation/customize/with-sass/
+
+Use either
+
+```
+bun run build:bulma
+bun run dev:bulma
+```
+
 ### TODO
-- Add Customize Bulma with Sass https://bulma.io/documentation/customize/with-sass/
-- add one script to build Bulma, one to build and watch for changes
+- Create an HTMX Version of the Tropico template with a mobile dropdown menu
 
 ### Potential Issues
 
