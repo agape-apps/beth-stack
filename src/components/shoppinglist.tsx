@@ -11,7 +11,7 @@ export const BaseHtml = ({ children }: any) => `
     <title>The BETH Stack</title>
     <script src="https://unpkg.com/htmx.org@1.9.3"></script>
     <script src="https://unpkg.com/hyperscript.org@0.9.14"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/my-bulma.css">
 </head>
 
 ${children}
@@ -49,7 +49,7 @@ export function ShoppingList({ shoppingItems }: { shoppingItems: Shopping[] }) {
       <div class="section">
         <h1 class="title has-text-centered has-text-info is-2">Shopping List</h1>
         <div class="columns is-centered">
-          <div class="column is-half">
+          <div class="column is-two-thirds-tablet">
             <div class="card">
               <div class="card-content">
                 {shoppingItems.map((shoppingItem: Shopping) => (

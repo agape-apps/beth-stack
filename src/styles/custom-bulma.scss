@@ -1,0 +1,77 @@
+// Path to Bulma's sass folder with customizations
+@use "bulma/sass" with (
+  // Colors
+  $primary: #3273dc,
+  $link: #1a4b84,
+  $info: #85b7ff,
+  $danger: rgba(219, 58, 58, 0.8),
+  $grey-dark: #757575,
+  $grey-light: #eef3fc,
+
+  // Typography
+  $family-primary: '"Nunito", sans-serif',
+
+  // Form elements
+  $control-border-width: 2px,
+  $input-shadow: none,
+
+  // Background
+  $body-background-color: #eef3fc
+);
+
+// Import the Google Font
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+
+// Add any additional custom styles below
+.button.is-danger {
+  opacity: 0.9;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.title.is-2 {
+  color: #1a4b84 !important;
+}
+
+// Fix container width issues at breakpoints
+.container {
+  @media screen and (max-width: 768px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  // Ensure consistent behavior around the tablet-desktop breakpoint (768px-1024px)
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    max-width: 90%;
+  }
+}
+
+// Ensure consistent column behavior
+.columns.is-centered.is-mobile {
+  margin-left: 0;
+  margin-right: 0;
+
+  .column.is-half-tablet.is-two-thirds-mobile {
+    @media screen and (max-width: 768px) {
+      width: 66.6666%;
+      padding: 0.75rem;
+    }
+
+    @media screen and (min-width: 769px) {
+      width: 50%;
+      max-width: 600px; // Set a maximum width for larger screens
+    }
+  }
+}
+
+// Ensure card maintains consistent width
+.card {
+  box-shadow: 0 2px 10px rgba(#1a4b84, 0.1);
+  width: 100%;
+
+  // Add a subtle transition for width changes
+  transition: width 0.2s ease-in-out;
+}
