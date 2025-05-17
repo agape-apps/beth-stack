@@ -10,6 +10,7 @@ export const BaseHtml = ({ children }: any) => `
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The BETH Stack</title>
     <script src="https://unpkg.com/htmx.org@1.9.3"></script>
+    <script src="https://unpkg.com/hyperscript.org@0.9.14"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 </head>
 
@@ -70,7 +71,9 @@ export function ShoppingForm() {
       class="field has-addons mt-5"
       hx-post="/shopping"
       hx-swap="beforebegin"
-      _="target"
+      _="on htmx:afterOnLoad
+         if event.detail.successful
+           set the value of <input/> in me to ''"
     >
       <div class="control is-expanded">
         <input type="text" name="name" class="input is-info" placeholder="Add item" />

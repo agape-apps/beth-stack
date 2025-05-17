@@ -26,6 +26,10 @@ Kill the server
 lsof -t -i :3000 | xargs kill
 ```
 
+### TODO
+- Add Customize Bulma with Sass https://bulma.io/documentation/customize/with-sass/
+- add one script to build Bulma, one to build and watch for changes
+
 ### Potential Issues
 
 - Route Conflict: The /:page? catch-all route might conflict with other specific routes if they're defined after it. Currently it's placed before the .listen(3000) call, which is correct.
