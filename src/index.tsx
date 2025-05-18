@@ -5,11 +5,7 @@ import * as elements from "typed-html";
 import { db } from "./db";
 import { shoppingItems } from "./db/schema";
 import { RootPage, ShoppingItem, ShoppingList } from "./components/shoppinglist";
-
-// for serving static pages with images
-import { staticPlugin } from "@elysiajs/static";
-import { readFileSync } from "fs";
-import { join } from "path";
+import { staticPlugin } from "@elysiajs/static"; 
 
 const app = new Elysia()
   .use(html())
@@ -87,37 +83,7 @@ const app = new Elysia()
   )
 
   // for serving static html pages, images, css and js from the public directory
-  // without prefix all files are served from root and relative paths work
-  .use(
-    staticPlugin({
-      assets: "public",
-      prefix: "",
-    })
-  )
-
-  .get("/:page?", ({ params }) => {
-    try {
-      // Default to "index" if no page parameter is provided
-      let pageName = params.page || "index";
-
-      // Remove .html extension if it exists in the URL
-      if (pageName.endsWith('.html')) {
-        pageName = pageName.slice(0, -5);
-      }
-
-      const filePath = join(process.cwd(), "public", `${pageName}.html`);
-      const content = readFileSync(filePath, "utf-8");
-
-      return new Response(content, {
-        headers: {
-          "Content-Type": "text/html; charset=utf-8",
-        },
-      });
-    } catch (error) {
-      return new Response("Page not found", { status: 404 });
-    }
-  })
-
+  .use(staticPlugin())
   .listen(3000);
 
 console.log(

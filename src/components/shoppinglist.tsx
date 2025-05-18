@@ -12,7 +12,7 @@ export function RootPage() {
     <title>The BETH Stack</title>
     <script src="https://unpkg.com/htmx.org@1.9.3"></script>
     <script src="https://unpkg.com/hyperscript.org@0.9.14"></script>
-    <link rel="stylesheet" href="/css/custom-bulma.css">
+    <link rel="stylesheet" href="/public/css/custom-bulma.css">
 </head>
 
 <body
@@ -57,7 +57,7 @@ export function ShoppingList({ shoppingItems }: { shoppingItems: Shopping[] }) {
       <div class="section">
         <h1 class="title has-text-centered has-text-info is-2">Shopping List</h1>
         <div class="columns is-centered">
-          <div class="column is-two-thirds-tablet">
+          <div class="column is-full">
             <div class="card">
               <div class="card-content">
                 {shoppingItems.map((shoppingItem: Shopping) => (
