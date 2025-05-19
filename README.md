@@ -8,7 +8,9 @@ This tech stack consists of:
 - ElysiaJS https://elysiajs.com/
 - Turso (SQLite) https://docs.turso.tech
 - HTMX https://htmx.org/
+
 ---
+
 - SQLite https://www.sqlite.org
 - Drizzle ORM: https://orm.drizzle.team
 - TypeScript https://www.typescriptlang.org/docs/
@@ -63,9 +65,10 @@ bunx drizzle-kit studio
 
 ### Deployment
 
-- via Fly.io
+- via Fly.io https://beth-stack.fly.dev/
 
 ### TODO
+
 - Create an HTMX/JSX Version of the Tropico index.html template with a mobile dropdown menu
 - Add custom 404 page.
 - add domain
